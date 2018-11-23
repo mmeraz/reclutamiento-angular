@@ -7,17 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterializeModule } from './material.congif';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CatAreaComponent } from './catalogos/cat-area/cat-area.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CatAreaComponent
+    CatAreaComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterializeModule
+    MaterializeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
