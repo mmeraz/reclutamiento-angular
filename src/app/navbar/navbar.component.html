@@ -1,23 +1,27 @@
+<!--Navbar-->
 <mz-navbar navbarClass="grey darken-2">
-    <a href="#" class="brand-logo">Logo  </a>
-    <button mz-button id="btn-sidenav-demo">
-      <i mz-icon
-      [align]="'right'"
-      [icon]="'cloud'"
-      [size]="'medium'">
+    <a href="#" id="btn-sidenav-demo" class="brand-logo">
+        <i mz-icon [align]="'left'" [icon]="'menu'" [size]="'large'">
     </i>
-      </button>
+    </a>
+    <mz-navbar-item-container [align]="'center'">
+        <mz-navbar-item>
+            <h4 style="padding-left: 450px;">Reclutamiento y Selección</h4>
+        </mz-navbar-item>
+    </mz-navbar-item-container>
     <mz-navbar-item-container [align]="'right'">
-        <mz-navbar-item><a href="#">Sass</a></mz-navbar-item>
-        <mz-navbar-item><a href="#">Components</a></mz-navbar-item>
-        <mz-navbar-item><a routerLink="js">JavaScript</a></mz-navbar-item>
+        <mz-navbar-item><a href="#">$Username</a></mz-navbar-item>
+        <mz-navbar-item>
+            <a href="#"> <i mz-icon [align]="'rigth'" [icon]="'subdirectory_arrow_right'"></i></a>
+        </mz-navbar-item>
     </mz-navbar-item-container>
 </mz-navbar>
 
 
-<mz-sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'">
-    <mz-sidenav-header>
-        Sidenav header
+<!-- Sidenav del lado izquierdo-->
+<mz-sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'" [backgroundClass]="''">
+    <mz-sidenav-header [ngClass]="'nav-header'">
+        <img [src]=''>
     </mz-sidenav-header>
     <mz-sidenav-subheader>Link Subheader</mz-sidenav-subheader>
     <mz-sidenav-link>
