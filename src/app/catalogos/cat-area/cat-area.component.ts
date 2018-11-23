@@ -5,7 +5,6 @@ import { AreaService } from 'src/app/service/cat.area.service';
 @Component({
   selector: 'app-cat-area',
   templateUrl: './cat-area.component.html',
-  styleUrls: ['./cat-area.component.css'],
   providers: [AreaService]
 })
 export class CatAreaComponent implements OnInit {
