@@ -1,5 +1,5 @@
 import { MzInputModule, MzValidationModule, MzButtonModule, MzSidenavModule, MzNavbarModule } from 'ngx-materialize';
-import { MzIconModule, MzIconMdiModule } from 'ngx-materialize'
+import { MzIconModule, MzIconMdiModule } from 'ngx-materialize';
 import { NgModule } from '@angular/core';
 
 @NgModule({
