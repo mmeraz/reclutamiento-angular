@@ -1,0 +1,34 @@
+<mz-navbar navbarClass="grey darken-2">
+    <a href="#" class="brand-logo">Logo  </a>
+    <button mz-button id="btn-sidenav-demo">
+      <i mz-icon
+      [align]="'right'"
+      [icon]="'cloud'"
+      [size]="'medium'">
+    </i>
+      </button>
+    <mz-navbar-item-container [align]="'right'">
+        <mz-navbar-item><a href="#">Sass</a></mz-navbar-item>
+        <mz-navbar-item><a href="#">Components</a></mz-navbar-item>
+        <mz-navbar-item><a routerLink="js">JavaScript</a></mz-navbar-item>
+    </mz-navbar-item-container>
+</mz-navbar>
+
+
+<mz-sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'">
+    <mz-sidenav-header>
+        Sidenav header
+    </mz-sidenav-header>
+    <mz-sidenav-subheader>Link Subheader</mz-sidenav-subheader>
+    <mz-sidenav-link>
+        <a href="#">First Link</a>
+    </mz-sidenav-link>
+    <mz-sidenav-divider></mz-sidenav-divider>
+    <mz-sidenav-link [active]="true">
+        <a href="#">Active Link</a>
+    </mz-sidenav-link>
+    <mz-sidenav-divider></mz-sidenav-divider>
+    <mz-sidenav-link>
+        <a href="#" class="waves-effect">Second Link With Waves</a>
+    </mz-sidenav-link>
+</mz-sidenav>
