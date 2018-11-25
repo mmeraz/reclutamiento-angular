@@ -11,6 +11,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { CreateComponent } from './catalogos/cat-area/create.component';
 import { RouterModule, Routes} from '@angular/router';
+import { SolicitudRequerimientoComponent } from './solicitud/solicitud-requerimiento.component';
+import { SolicitudCandidatoComponent } from './solicitud/solicitud-candidato.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/clientes', pathMatch: 'full'},
@@ -25,6 +27,8 @@ const routes: Routes = [
     NavbarComponent,
     CatAreaComponent,
     CreateComponent,
+    SolicitudRequerimientoComponent,
+    SolicitudCandidatoComponent,
   ],
 
   imports: [

@@ -1,0 +1,291 @@
+<div class="row">
+  <div class="col s12 m6 l2 offset-l1">
+      <button mz-button class="green">
+          Agregar
+        </button>
+  </div>
+  <div class="col s12 m6 l2">
+      <button mz-button class="amber lighten-1">
+          Guardar
+        </button>
+  </div>
+  <div class="col s12 m6 l2" >
+      <button mz-button class="red">
+          Cancelar
+        </button>
+  </div>
+  <div class="col s12 m 6 l4">
+      <mz-card [horizontal]="true" > 
+       
+          <mz-card-image >
+              <img src="assets/img/calendario.png" width="100px" height="150px" />
+            </mz-card-image>
+      
+          <mz-card-content>
+              <div class="col s12 m 6 l12">
+              <label for="last_name">Fecha: </label>
+              </div>
+              <div class="col s12 m 6 l12">
+              <label for="last_name">Folio: </label>
+              </div>
+              <div class="col s12 m 6 l12">
+              <label for="last_name">Asesor Comercial: </label>
+              </div>
+
+          </mz-card-content>
+
+        </mz-card>
+  </div>
+ 
+</div>
+<div class="container">
+    <mz-collapsible class="col s12 m8 l6" mode="accordion">
+  
+        <mz-collapsible-item>
+          <mz-collapsible-item-header>Datos del Requerimiento</mz-collapsible-item-header>
+          <mz-collapsible-item-body>
+            <div class="row">
+              <div class="col s12 m4 l4">
+              <mz-select-container>
+                  <select mz-select
+                    id="options-select"
+                    [label]="'Requeridos del Cliente'"
+                    [placeholder]="'Requeridos del Cliente'"
+                  >
+                      <option data-icon="assets/select-icon-1.jpg" class="left circle">Option 1</option>
+                      <option data-icon="assets/select-icon-2.jpg" class="left circle">Option 2</option>
+                      <option data-icon="assets/select-icon-3.jpg" class="left circle">Option 3</option>
+                  
+                  </select>
+                </mz-select-container>
+                </div>
+                <div class="col s12 m4 l4">
+                <mz-select-container>
+                    <select mz-select
+                      id="options-select"
+                      [label]="'Prioridad'"
+                      [placeholder]="'Prioridad'"
+                    >
+                        <option data-icon="assets/select-icon-1.jpg" class="left circle">Option 1</option>
+                        <option data-icon="assets/select-icon-2.jpg" class="left circle">Option 2</option>
+                        <option data-icon="assets/select-icon-3.jpg" class="left circle">Option 3</option>
+                    
+                    </select>
+                  </mz-select-container>
+                </div>
+                <div class="col s12 m4 l4">
+                  <mz-select-container>
+                      <select mz-select
+                        id="options-select"
+                        [label]="'Area de Negocio'"
+                        [placeholder]="'Area de Negocio'"
+                      >
+                          <option data-icon="assets/select-icon-1.jpg" class="left circle">Option 1</option>
+                          <option data-icon="assets/select-icon-2.jpg" class="left circle">Option 2</option>
+                          <option data-icon="assets/select-icon-3.jpg" class="left circle">Option 3</option>
+                      
+                      </select>
+                    </mz-select-container>
+                  </div>
+                  <div class="col s12 m4 l4">
+                    <mz-select-container>
+                        <select mz-select
+                          id="options-select"
+                          [label]="'Existe Presupuesto'"
+                          [placeholder]="'Existe Presupuesto'"
+                        >
+                            <option data-icon="assets/select-icon-1.jpg" class="left circle">Option 1</option>
+                            <option data-icon="assets/select-icon-2.jpg" class="left circle">Option 2</option>
+                            <option data-icon="assets/select-icon-3.jpg" class="left circle">Option 3</option>
+                        
+                        </select>
+                      </mz-select-container>
+                    </div>
+                    <div class="col s12 m4 l4">
+                      <mz-select-container>
+                          <select mz-select
+                            id="options-select"
+                            [label]="'Tipo de Vacante'"
+                            [placeholder]="'Tipo de Vacante'"
+                          >
+                              <option data-icon="assets/select-icon-1.jpg" class="left circle">Option 1</option>
+                              <option data-icon="assets/select-icon-2.jpg" class="left circle">Option 2</option>
+                              <option data-icon="assets/select-icon-3.jpg" class="left circle">Option 3</option>
+                          
+                          </select>
+                        </mz-select-container>
+                      </div>
+              </div>
+          </mz-collapsible-item-body>
+        </mz-collapsible-item>
+    
+        <mz-collapsible-item>
+          <mz-collapsible-item-header>Datos del Cliente</mz-collapsible-item-header>
+          <mz-collapsible-item-body>
+            <div class="row">
+                <div class="col s12 m4 l4">
+                    <mz-select-container>
+                      <select mz-select
+                          id="options-select"
+                          [label]="'Cliente'"
+                          [placeholder]="'Cliente'"
+                        >
+                            <option data-icon="assets/select-icon-1.jpg" class="left circle">Option 1</option>
+                            <option data-icon="assets/select-icon-2.jpg" class="left circle">Option 2</option>
+                            <option data-icon="assets/select-icon-3.jpg" class="left circle">Option 3</option>
+                        
+                      </select>
+                    </mz-select-container>
+                  </div>
+                  <div class="col s12 m6 l2">
+                      <button mz-button class="green">
+                          Nuevo
+                        </button>
+                  </div>
+                  <div class="col s12 m6 l2">
+                      <button mz-button class="blue">
+                          Editar
+                        </button>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m4 l4">
+                  <mz-input-container >
+                  <input mz-input
+                    name="Contacto"
+                    [label]="'Contacto'"
+                    id="Contacto"
+                    placeholder="Contacto"
+                    type="text">
+                </mz-input-container>
+                    
+                  </div>
+                  <div class="col s12 m6 l2">
+                      <button mz-button class="green">
+                          Nuevo
+                        </button>
+                  </div>
+                  
+            </div>
+          </mz-collapsible-item-body>
+        </mz-collapsible-item>
+    
+        <mz-collapsible-item>
+          <mz-collapsible-item-header>Datos del Proyecto</mz-collapsible-item-header>
+          <mz-collapsible-item-body>
+              <div class="row">
+                  <div class="col s12 m12 l12">
+                    <mz-input-container >
+                    <input mz-input
+                      name="proyecto"
+                      [label]="'Nombre del Proyecto'"
+                      id="nomprepro"
+                      placeholder="Nombre del Proyecto"
+                      type="text">
+                  </mz-input-container>
+                  </div>
+                  <div class="col s12 m12 l12">
+                      <mz-input-container >
+                      <input mz-input
+                        name="descripcion"
+                        [label]="'Descripcion'"
+                        id="descripcionpro"
+                        placeholder="Descripcion"
+                        type="text">
+                    </mz-input-container>
+                  </div>
+                  <div class="col s12 m6 l6">
+                      <mz-input-container >
+                      <input mz-input
+                        name="Puesto"
+                        [label]="'Puesto'"
+                        id="puesto"
+                        placeholder="Puesto"
+                        type="text">
+                    </mz-input-container>
+                  </div>
+                  <div class="col s12 m6 l6">
+                      <mz-input-container >
+                      <input mz-input
+                        name="inicio"
+                        [label]="'Inicio'"
+                        id="inicio"
+                        placeholder="Inicio"
+                        type="text">
+                    </mz-input-container>
+                  </div>
+                  <div class="col s12 m12 l12">
+                  <mz-textarea-container>
+                      <i mz-icon-mdi mz-textarea-prefix
+                        [icon]="'message-reply-text'">
+                      </i>
+                      <textarea mz-textarea
+                        [label]="'Comentarios'"
+                        id="comment-textarea"
+                        placeholder="Comentarios"
+                        length="150"></textarea>
+                    </mz-textarea-container>
+                  </div>
+              </div>
+    
+    
+          </mz-collapsible-item-body>
+        </mz-collapsible-item>
+    
+        <mz-collapsible-item>
+            <mz-collapsible-item-header>Conociminetos Requeridos</mz-collapsible-item-header>
+            <mz-collapsible-item-body>
+              <div class="row">
+                  <div class="col s12 m6 l4">
+                      <button mz-button class="blue">
+                          Tecnico
+                        </button>
+                  </div>
+                  <div class="col s12 m6 l4">
+                      <button mz-button class="blue">
+                          Idioma
+                        </button>
+                  </div>
+                  <div class="col s12 m6 l4">
+                      <button mz-button class="blue">
+                          Habilidades
+                        </button>
+                  </div>
+
+              </div>
+            </mz-collapsible-item-body>
+          </mz-collapsible-item>
+    
+          <mz-collapsible-item>
+              <mz-collapsible-item-header>Conocimientos Adicionales</mz-collapsible-item-header>
+              <mz-collapsible-item-body>
+                  <div class="col s12 m6 l2">
+                      <button mz-button class="green">
+                          Habilidades Deseables
+                        </button>
+                  </div>
+              </mz-collapsible-item-body>
+            </mz-collapsible-item>
+    
+            <mz-collapsible-item>
+                <mz-collapsible-item-header>Percepciones</mz-collapsible-item-header>
+                <mz-collapsible-item-body>
+                  <div class="row">
+                      <div class="col s12 m6 l6">
+                          <button mz-button class="green">
+                              Agragar
+                            </button>
+                      </div>
+                      <div class="col s12 m6 l2 offset-l2">
+                          <button mz-button class="blue">
+                              Cotizar
+                            </button>
+                      </div>
+
+                  </div>
+                    
+                </mz-collapsible-item-body>
+              </mz-collapsible-item>
+    
+      </mz-collapsible>
+    </div>
