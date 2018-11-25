@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {  HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
@@ -52,6 +53,7 @@ import { CatConsolicitadoComponent } from './catalogos/cat-consolicitado/cat-con
 import { CatConsolicitadoidComponent } from './catalogos/cat-consolicitadoid/cat-consolicitadoid.component';
 import { CatTipvacanteComponent } from './catalogos/cat-tipvacante/cat-tipvacante.component';
 import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.component';
+import { routing, appRoutingProviders } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -107,9 +109,13 @@ import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.compone
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterializeModule
+    MaterializeModule,
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [
+    appRoutingProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
