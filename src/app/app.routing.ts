@@ -37,6 +37,10 @@ import { CatSolidiomaComponent } from './catalogos/cat-solidioma/cat-solidioma.c
 import { CatSolpercepcionesComponent } from './catalogos/cat-solpercepciones/cat-solpercepciones.component';
 import { CatTipvacanteComponent } from './catalogos/cat-tipvacante/cat-tipvacante.component';
 import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.component';
+import { SolicitudCandidatoComponent} from './solicitud/solicitud-candidato.component';
+import { SolicitudRequerimientoComponent} from './solicitud/solicitud-requerimiento.component';
+
+
 
 
 
@@ -75,7 +79,9 @@ import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.compone
   {path: 'Idioma-solicitud', component: CatSolidiomaComponent },
   {path: 'Solicitud-percepciones', component: CatSolpercepcionesComponent },
   {path: 'Tipo-vacante', component: CatTipvacanteComponent },
-  {path: 'Usuarios', component: CatUsuarioComponent }
+  {path: 'Usuarios', component: CatUsuarioComponent },
+  {path: 'Solicitud-Candidato', component: SolicitudCandidatoComponent },
+  {path: 'Solicitud-Requerimiento', component: SolicitudRequerimientoComponent}
   ];
 
  export const appRoutingProviders: any[] = [];

@@ -9,8 +9,7 @@ import { MaterializeModule } from './material.congif';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CatAreaComponent } from './catalogos/cat-area/cat-area.component';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
-import { CreateComponent } from './catalogos/cat-area/create.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule, Routes} from '@angular/router';
 import { SolicitudRequerimientoComponent } from './solicitud/solicitud-requerimiento.component';
 import { SolicitudCandidatoComponent } from './solicitud/solicitud-candidato.component';
@@ -55,7 +54,6 @@ import { routing, appRoutingProviders } from './app.routing';
     AppComponent,
     NavbarComponent,
     CatAreaComponent,
-    CreateComponent,
     SolicitudRequerimientoComponent,
     SolicitudCandidatoComponent,
     CatCandidatoComponent,
@@ -99,7 +97,10 @@ import { routing, appRoutingProviders } from './app.routing';
     BrowserAnimationsModule,
     MaterializeModule,
     HttpModule,
-    routing
+    routing,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     appRoutingProviders
