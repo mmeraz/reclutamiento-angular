@@ -8,21 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterializeModule } from './material.congif';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CatAreaComponent } from './catalogos/cat-area/cat-area.component';
-<<<<<<< HEAD
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { CreateComponent } from './catalogos/cat-area/create.component';
 import { RouterModule, Routes} from '@angular/router';
 import { SolicitudRequerimientoComponent } from './solicitud/solicitud-requerimiento.component';
 import { SolicitudCandidatoComponent } from './solicitud/solicitud-candidato.component';
-
-const routes: Routes = [
-  {path: '', redirectTo: '/clientes', pathMatch: 'full'},
-  {path: 'clientes', component: CatAreaComponent},
-  {path: 'clientes/form', component: CreateComponent},
-  {path: 'clientes/form/:id', component: CreateComponent}
-];
-=======
 import { CatDocumentosComponent } from './catalogos/cat-documentos/cat-documentos.component';
 import { CatDoccandidatoComponent } from './catalogos/cat-doccandidato/cat-doccandidato.component';
 import { CatCompcandidatoComponent } from './catalogos/cat-compcandidato/cat-compcandidato.component';
@@ -58,18 +49,15 @@ import { CatConsolicitadoComponent } from './catalogos/cat-consolicitado/cat-con
 import { CatTipvacanteComponent } from './catalogos/cat-tipvacante/cat-tipvacante.component';
 import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.component';
 import { routing, appRoutingProviders } from './app.routing';
->>>>>>> 7334b10e54c419ffae0487fdf1df89fe0dd9d22a
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CatAreaComponent,
-<<<<<<< HEAD
     CreateComponent,
     SolicitudRequerimientoComponent,
     SolicitudCandidatoComponent,
-=======
     CatCandidatoComponent,
     CatClienteComponent,
     CatCompcandidatoComponent,
@@ -104,8 +92,6 @@ import { routing, appRoutingProviders } from './app.routing';
     CatSolpercepcionesComponent,
     CatTipvacanteComponent,
     CatUsuarioComponent
-
->>>>>>> 7334b10e54c419ffae0487fdf1df89fe0dd9d22a
   ],
 
   imports: [

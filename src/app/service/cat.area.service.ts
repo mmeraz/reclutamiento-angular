@@ -13,7 +13,7 @@ export class AreaService {
 
   constructor( private clienteHttp: HttpClient) {}
 
-  getAreas(): Observable<Catarea[]> {
+  getAreas() {
     return this.clienteHttp.get<Catarea[]>(this.url + '/fetch');
   }
 
