@@ -1,3 +1,28 @@
-<p>
-  cat-area works!
-</p>
+
+<div class="container">
+<table class="highlight">
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>Area</th>
+        <th>Modificar</th>
+        <th>Eliminar</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let a of arrayAreas">
+      <td> {{a.arnIdarean}}</td>
+      <td>{{a.arnTipo}}</td>
+      <td><button mz-button>
+        Editar
+      </button></td>
+      <td><button mz-button>
+        Eliminar
+      </button></td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+

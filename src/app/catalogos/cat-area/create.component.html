@@ -1,0 +1,31 @@
+<button mz-button (click)="basicModal.openModal()"> 
+    Nuevo
+  </button>
+<div >
+    <mz-modal #basicModal>
+      <mz-modal-header>
+        <h4>Agregar Area</h4>
+      </mz-modal-header>
+      <mz-modal-content>
+          <form >
+          <mz-input-container class="col s12 m6">
+              <input mz-input
+                ngModel="Catarea.arnTipo"
+                name="arnTipo"
+                [label]="'Label'"
+                id="Area"
+                placeholder="IDArea"
+                type="text">
+            </mz-input-container>
+  
+          </form>
+      </mz-modal-content>
+      <mz-modal-footer>
+        <button mz-button [flat]="true" 
+         role="button" (click)='create()'
+         mz-modal-close>Guardar</button>
+        <button mz-button [flat]="true" mz-modal-close>Cancelar</button>
+      </mz-modal-footer>
+    </mz-modal>
+  </div>
+  
