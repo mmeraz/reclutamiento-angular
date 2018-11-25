@@ -11,12 +11,11 @@ export class CatAreaComponent implements OnInit {
 
   arrayAreas: Catarea[];
 
-  constructor( private areaService: AreaService ) { }
+  constructor( private areaService: AreaService) { }
 
   ngOnInit() {
     this.areaService.getAreas().subscribe(
       (data: Catarea[]) => this.arrayAreas = data
     );
   }
-
 }

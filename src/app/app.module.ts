@@ -8,19 +8,32 @@ import { MaterializeModule } from './material.congif';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CatAreaComponent } from './catalogos/cat-area/cat-area.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import { CreateComponent } from './catalogos/cat-area/create.component';
+import { RouterModule, Routes} from '@angular/router';
 
+const routes: Routes = [
+  {path: '', redirectTo: '/clientes', pathMatch: 'full'},
+  {path: 'clientes', component: CatAreaComponent},
+  {path: 'clientes/form', component: CreateComponent},
+  {path: 'clientes/form/:id', component: CreateComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CatAreaComponent,
+    CreateComponent,
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterializeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
