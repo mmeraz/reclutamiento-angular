@@ -1,3 +1,7 @@
-        .nav-header {
-            background: rgba(0, 0, 0, .5);
+        .bg-header {
+            background-image: url(../../assets/img/ns-bg2.png);
+            background-size: cover;
+            background-position: center;
+            width: 300px;
+            height: 180px;
         }

@@ -19,20 +19,61 @@
 
 
 <!-- Sidenav del lado izquierdo-->
-<mz-sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'" [backgroundClass]="''">
-    <mz-sidenav-header [ngClass]="'nav-header'">
-        <img [src]=''>
+<mz-sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'">
+    <mz-sidenav-header>
+        <div class="grey darken-4">
+            <div class="bg-header">
+                <!-- <div class="user-view">
+                    <img class="circle avatar" src="../../assets//img/ns.png">
+                    <div class="white-text name">King Nobody</div>
+                    <div class="white-text email">king.nobody@gmail.com</div>
+                </div> -->
+            </div>
+        </div>
     </mz-sidenav-header>
-    <mz-sidenav-subheader>Link Subheader</mz-sidenav-subheader>
-    <mz-sidenav-link>
-        <a href="#">First Link</a>
-    </mz-sidenav-link>
-    <mz-sidenav-divider></mz-sidenav-divider>
-    <mz-sidenav-link [active]="true">
-        <a href="#">Active Link</a>
-    </mz-sidenav-link>
-    <mz-sidenav-divider></mz-sidenav-divider>
-    <mz-sidenav-link>
-        <a href="#" class="waves-effect">Second Link With Waves</a>
-    </mz-sidenav-link>
+    <mz-sidenav-subheader>
+        Reclutamiento
+    </mz-sidenav-subheader>
+
+
+
+    <ul class="collapsible collapsible-accordion">
+        <li>
+            <a class="collapsible-header">Solicitudes<i class="material-icons rigth">
+              assignment </i></a>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#!">Prueba</a></li>
+
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <ul class="collapsible collapsible-accordion">
+        <li>
+            <a class="collapsible-header">Candidatos<i class="material-icons rigth">
+              assignment_ind</i></a>
+            <div class="collapsible-body">
+                <ul>
+                    <li><a href="#!">Prueba</a></li>
+
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <ul class="collapsible collapsible-accordion">
+        <li>
+            <a class="collapsible-header">Catálogos<i class="material-icons rigth">
+              folder</i></a>
+            <div class="collapsible-body" *ngFor="let c of catalogos">
+                <ul>
+                    <li><a href="#!" routerLink="/{{c.path}}">{{c.titulo}}</a></li>
+
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+
+
 </mz-sidenav>
