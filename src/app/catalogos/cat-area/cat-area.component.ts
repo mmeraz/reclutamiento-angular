@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Catarea } from 'src/app/model/catarea.model';
 import { AreaService } from 'src/app/service/cat.area.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Router, ActivatedRoute} from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-cat-area',
@@ -9,11 +11,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   providers: [AreaService]
 })
 export class CatAreaComponent implements OnInit {
+  @Input() area: Catarea;
   angForm: FormGroup;
   arrayAreas: Catarea[];
 
   constructor( private areaService: AreaService, 
-    private fb: FormBuilder, private bs: AreaService) { 
+    private fb: FormBuilder, private bs: AreaService,
+    private router: Router,
+    private location: Location,
+    private activatedRoute: ActivatedRoute) { 
       this.createForm();
     }
 
@@ -30,5 +36,13 @@ export class CatAreaComponent implements OnInit {
 
   addarea(arnTipo) {
     this.bs.addarea(arnTipo);
+  }
+  goBack(): void {
+    this.location.back();
+  }
+
+  update():void{
+    this.areaService.update(this.area)
+      .subscribe(() => this.goBack());
   }
 }
