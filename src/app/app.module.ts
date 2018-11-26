@@ -49,6 +49,7 @@ import { CatTipvacanteComponent } from './catalogos/cat-tipvacante/cat-tipvacant
 import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.component';
 import { routing, appRoutingProviders } from './app.routing';
 import { LoginComponent } from './login/login.component';
+import { EditComponent } from './catalogos/cat-area/edit.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { LoginComponent } from './login/login.component';
     CatSolpercepcionesComponent,
     CatTipvacanteComponent,
     CatUsuarioComponent,
-    LoginComponent
+    LoginComponent,
+    EditComponent
   ],
 
   imports: [

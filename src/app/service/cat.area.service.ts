@@ -12,6 +12,7 @@ import { Catarea } from '../model/catarea.model';
 )
 export class AreaService {
   private url = 'http://localhost:8085/api/v1/areaNegocio';
+  private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
 
 
@@ -29,6 +30,25 @@ export class AreaService {
         .subscribe(res => console.log('Done'));
   }
 
+  getCliente(id): Observable<Catarea> {
+    return this.clienteHttp.get<Catarea>(`${this.url}/${id}`);
+  }
+  editBusiness(id) {
+    return this
+            .clienteHttp
+            .get(`${this.url}/update/${id}`);
+    }
+
+  updateBusiness(arnTipo, id) {
+
+    const obj = {
+      arnTipo: arnTipo
+      };
+    this
+      .clienteHttp
+      .post(`${this.url}/update/${id}`, obj)
+      .subscribe(res => console.log('Done'));
+  }
 
 }
 
