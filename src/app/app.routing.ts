@@ -39,6 +39,7 @@ import { CatTipvacanteComponent } from './catalogos/cat-tipvacante/cat-tipvacant
 import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.component';
 import { SolicitudCandidatoComponent} from './solicitud/solicitud-candidato.component';
 import { SolicitudRequerimientoComponent} from './solicitud/solicitud-requerimiento.component';
+import { LoginComponent} from './login/login.component';
 
 
 
@@ -81,7 +82,8 @@ import { SolicitudRequerimientoComponent} from './solicitud/solicitud-requerimie
   {path: 'Tipo-vacante', component: CatTipvacanteComponent },
   {path: 'Usuarios', component: CatUsuarioComponent },
   {path: 'Solicitud-Candidato', component: SolicitudCandidatoComponent },
-  {path: 'Solicitud-Requerimiento', component: SolicitudRequerimientoComponent}
+  {path: 'Solicitud-Requerimiento', component: SolicitudRequerimientoComponent},
+  {path: 'Login', component: LoginComponent}
   ];
 
  export const appRoutingProviders: any[] = [];

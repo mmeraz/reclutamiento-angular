@@ -11,15 +11,12 @@ import { Location } from '@angular/common';
   providers: [AreaService]
 })
 export class CatAreaComponent implements OnInit {
-  @Input() area: Catarea;
   angForm: FormGroup;
   arrayAreas: Catarea[];
 
-  constructor( private areaService: AreaService, 
+  constructor( private areaService: AreaService,
     private fb: FormBuilder, private bs: AreaService,
-    private router: Router,
-    private location: Location,
-    private activatedRoute: ActivatedRoute) { 
+    private activatedRoute: ActivatedRoute) {
       this.createForm();
     }
 
@@ -37,12 +34,5 @@ export class CatAreaComponent implements OnInit {
   addarea(arnTipo) {
     this.bs.addarea(arnTipo);
   }
-  goBack(): void {
-    this.location.back();
-  }
 
-  update():void{
-    this.areaService.update(this.area)
-      .subscribe(() => this.goBack());
-  }
 }

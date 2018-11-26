@@ -48,6 +48,7 @@ import { CatConsolicitadoComponent } from './catalogos/cat-consolicitado/cat-con
 import { CatTipvacanteComponent } from './catalogos/cat-tipvacante/cat-tipvacante.component';
 import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.component';
 import { routing, appRoutingProviders } from './app.routing';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { routing, appRoutingProviders } from './app.routing';
     CatSolidiomaComponent,
     CatSolpercepcionesComponent,
     CatTipvacanteComponent,
-    CatUsuarioComponent
+    CatUsuarioComponent,
+    LoginComponent
   ],
 
   imports: [

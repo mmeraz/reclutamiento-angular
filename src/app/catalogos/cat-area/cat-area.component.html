@@ -1,5 +1,5 @@
 
-<button mz-button (click)="basicModal.openModal()"> 
+<button mz-button (click)="basicModal.openModal()">
     Nuevo
   </button>
 <div class="container">
@@ -17,7 +17,7 @@
     <tr *ngFor="let a of arrayAreas">
       <td> {{a.arnIdarean}}</td>
       <td>{{a.arnTipo}}</td>
-      <td><button mz-button click)="editModal.openModal(), a.arnIdarean">
+      <td><button mz-button >
         Editar
       </button></td>
       <td><button mz-button>
@@ -39,37 +39,15 @@
 
           <label >Area</label>
           <input type="text" class="form-control" formControlName="arnTipo" #arnTipo/>
-  
+
         </form>
       </mz-modal-content>
       <mz-modal-footer>
-        <button mz-button [flat]="true" 
+        <button mz-button [flat]="true"
          role="button" (click)='addarea(arnTipo.value)'
          mz-modal-close>Guardar</button>
         <button mz-button [flat]="true" mz-modal-close>Cancelar</button>
       </mz-modal-footer>
     </mz-modal>
-</div>
-
-<div >
-  <mz-modal #editModal>
-    <mz-modal-header>
-      <h4>Editar Area</h4>
-    </mz-modal-header>
-    <mz-modal-content>
-      <form [formGroup]="angForm">
-
-        <label >Area</label>
-        <input type="text" class="form-control" [ngModel]="area.nombre" />
-
-      </form>
-    </mz-modal-content>
-    <mz-modal-footer>
-      <button mz-button flat]="true" 
-      role="button" (click)='update(arnTipo.value)'
-      mz-modal-close>Editar</button>
-      <button mz-button [flat]="true" mz-modal-close>Cancelar</button>
-    </mz-modal-footer>
-  </mz-modal>
 </div>
 
