@@ -2,11 +2,14 @@
 
 <form [formGroup]="angForm">
   <label >Area</label>
-  <input type="text" class="form-control" />
-
-  <button mz-button [flat]="true"
-  role="button"
-  >Guardar</button>
- <button mz-button [flat]="true" >Cancelar</button>
+  <input type="text" class="form-control" formControlName="arnTipo" #arnTipo [(ngModel)] = "Area.arnTipo"/>
 </form>
 
+<button mz-button [flat]="true"
+  role="button"
+  (click)="updateBusiness(arnTipo.value)"
+        [disabled]="angForm.invalid" 
+  >Guardar</button>
+  
+ <button mz-button [flat]="true" 
+ >Cancelar</button>

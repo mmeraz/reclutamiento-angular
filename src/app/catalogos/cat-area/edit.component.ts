@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CatAreaComponent } from './cat-area.component';
-import { Catarea } from 'src/app/model/catarea.model';
 import { AreaService } from 'src/app/service/cat.area.service';
 import {Router, ActivatedRoute} from '@angular/router';
-import { CLIENTES } from './catarea.json';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -22,7 +19,7 @@ export class EditComponent implements OnInit {
 
      createForm() {
       this.angForm = this.fb.group({
-        arnTipo: ['', Validators.required ]
+        arnIdarean: ['', Validators.required ]
         });
       }
 
@@ -37,7 +34,7 @@ export class EditComponent implements OnInit {
   updateBusiness(arnTipo) {
     this.route.params.subscribe(params => {
        this.bs.updateBusiness(arnTipo, params['id']);
-       this.router.navigate(['business']);
+       this.router.navigate(['Area']);
     });
  }
 

@@ -34,5 +34,10 @@ export class CatAreaComponent implements OnInit {
   addarea(arnTipo) {
     this.bs.addarea(arnTipo);
   }
+  deleteBusiness(id) {
+    this.bs.deleteBusiness(id).subscribe(res => {
+      console.log('Deleted');
+    });
+  }
 
 }

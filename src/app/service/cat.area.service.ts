@@ -36,7 +36,7 @@ export class AreaService {
   editBusiness(id) {
     return this
             .clienteHttp
-            .get(`${this.url}/update/${id}`);
+            .get(`${this.url}/fetch/${id}`);
     }
 
   updateBusiness(arnTipo, id) {
@@ -46,8 +46,13 @@ export class AreaService {
       };
     this
       .clienteHttp
-      .post(`${this.url}/update/${id}`, obj)
+      .post(`${this.url}/update`, obj)
       .subscribe(res => console.log('Done'));
+  }
+  deleteBusiness(id) {
+    return this
+              .clienteHttp
+              .delete(`${this.url}/delete/${id}`);
   }
 
 }
