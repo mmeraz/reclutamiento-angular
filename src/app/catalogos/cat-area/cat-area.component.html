@@ -17,10 +17,10 @@
     <tr *ngFor="let a of arrayAreas">
       <td> {{a.arnIdarean}}</td>
       <td>{{a.arnTipo}}</td>
-      <td><button mz-button >
+      <td><button mz-button [routerLink]="['/Edit', a.arnIdarean]">
         Editar
       </button></td>
-      <td><button mz-button>
+      <td><button mz-button (click) = "deleteBusiness(a.arnIdarean)">
         Eliminar
       </button></td>
     </tr>

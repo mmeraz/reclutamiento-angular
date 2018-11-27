@@ -40,6 +40,8 @@ import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.compone
 import { SolicitudCandidatoComponent} from './solicitud/solicitud-candidato.component';
 import { SolicitudRequerimientoComponent} from './solicitud/solicitud-requerimiento.component';
 import { LoginComponent} from './login/login.component';
+import { EditAreaComponent} from './catalogos/cat-area/edit.component';
+
 
 
 
@@ -83,7 +85,8 @@ import { LoginComponent} from './login/login.component';
   {path: 'Usuarios', component: CatUsuarioComponent },
   {path: 'Solicitud-Candidato', component: SolicitudCandidatoComponent },
   {path: 'Solicitud-Requerimiento', component: SolicitudRequerimientoComponent},
-  {path: 'Login', component: LoginComponent}
+  {path: 'Login', component: LoginComponent},
+  {path: 'Edit/:id', component: EditAreaComponent}
   ];
 
  export const appRoutingProviders: any[] = [];
