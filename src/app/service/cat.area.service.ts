@@ -30,8 +30,8 @@ export class AreaService {
         .subscribe(res => console.log('Done'));
   }
 
-  getCliente(id): Observable<Catarea> {
-    return this.clienteHttp.get<Catarea>(`${this.url}/${id}`);
+  getArea(id): Observable<Catarea> {
+    return this.clienteHttp.get<Catarea>(`${this.url}/fetch/${id}`);
   }
   editBusiness(id) {
     return this
@@ -39,14 +39,14 @@ export class AreaService {
             .get(`${this.url}/fetch/${id}`);
     }
 
-  updateBusiness(arnTipo, id) {
-
+  updateBusiness(arnTipo, arnIdarean) {
+    arnIdarean = arnIdarean;
     const obj = {
-      arnTipo: arnTipo
+      arnTipo: arnTipo,
       };
     this
       .clienteHttp
-      .post(`${this.url}/update`, obj)
+      .put(`${this.url}/update/${arnIdarean}`, obj)
       .subscribe(res => console.log('Done'));
   }
   deleteBusiness(id) {
@@ -54,6 +54,8 @@ export class AreaService {
               .clienteHttp
               .delete(`${this.url}/delete/${id}`);
   }
+
+
 
 }
 

@@ -4,6 +4,7 @@ import { AreaService } from 'src/app/service/cat.area.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {Router, ActivatedRoute} from '@angular/router';
 import { Location } from '@angular/common';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cat-area',
@@ -33,10 +34,35 @@ export class CatAreaComponent implements OnInit {
 
   addarea(arnTipo) {
     this.bs.addarea(arnTipo);
+    swal({
+      position: 'top',
+      type: 'success',
+      title: `Área creada con éxito`,
+      showConfirmButton: false,
+      timer: 1500
+    });
+    console.log('Area registrada');
   }
   deleteBusiness(id) {
     this.bs.deleteBusiness(id).subscribe(res => {
       console.log('Deleted');
+      swal({
+        title: 'Está seguro?',
+        text: `¿Seguro desea eliminar al área ${id}?`,
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, eliminar!',
+        cancelButtonText: 'Cancelar'
+      }).then(result => {
+        if (result.value) {
+          this.areaService.deleteBusiness(id).subscribe(data => {
+            this.arrayAreas = this.arrayAreas.filter(c => c !== id);
+          });
+          swal('Eliminado!', 'Se ha eliminado el área.', 'success');
+        }
+      });
     });
   }
 

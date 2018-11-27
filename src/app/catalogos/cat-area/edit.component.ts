@@ -2,14 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { AreaService } from 'src/app/service/cat.area.service';
 import {Router, ActivatedRoute} from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import swal from 'sweetalert2';
+import { Catarea } from '../../model/catarea.model';
 
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html'
 })
-export class EditComponent implements OnInit {
-  angForm: FormGroup;
+export class EditAreaComponent implements OnInit {
+  editForm: FormGroup;
   area: any = {};
+
   constructor(private route: ActivatedRoute,
     private router: Router,
     private bs: AreaService,
@@ -18,8 +21,8 @@ export class EditComponent implements OnInit {
      }
 
      createForm() {
-      this.angForm = this.fb.group({
-        arnIdarean: ['', Validators.required ]
+      this.editForm = this.fb.group({
+        arnTipo: ['', Validators.required ]
         });
       }
 
@@ -31,10 +34,17 @@ export class EditComponent implements OnInit {
       });
     });
   }
-  updateBusiness(arnTipo) {
+   updateBusiness(arnTipo) {
     this.route.params.subscribe(params => {
        this.bs.updateBusiness(arnTipo, params['id']);
        this.router.navigate(['Area']);
+       swal({
+        position: 'top',
+        type: 'success',
+        title: `Área modificado con éxito`,
+        showConfirmButton: false,
+        timer: 1500
+      });
     });
  }
 

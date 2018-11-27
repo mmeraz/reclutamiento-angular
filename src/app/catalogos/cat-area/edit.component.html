@@ -1,15 +1,18 @@
-<h1>Editar</h1>
+<div class="container">
+    <h4>Editar</h4>
+    <div class="row">
+        <div class="col s12 m6  text-center">
+            <form [formGroup]="editForm">
+                <label>Area</label>
+                <input type="text" class="form-control" formControlName="arnTipo" #arnTipo/>
+            </form>
 
-<form [formGroup]="angForm">
-  <label >Area</label>
-  <input type="text" class="form-control" formControlName="arnTipo" #arnTipo [(ngModel)] = "Area.arnTipo"/>
-</form>
+        </div>
+    </div>
 
-<button mz-button [flat]="true"
-  role="button"
-  (click)="updateBusiness(arnTipo.value)"
-        [disabled]="angForm.invalid" 
-  >Guardar</button>
-  
- <button mz-button [flat]="true" 
- >Cancelar</button>
+
+    <button mz-button [flat]="true" role="button" (click)="updateBusiness(arnTipo.value)">Guardar</button>
+
+    <button mz-button [flat]="true">Cancelar</button>
+
+</div>

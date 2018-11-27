@@ -49,7 +49,7 @@ import { CatTipvacanteComponent } from './catalogos/cat-tipvacante/cat-tipvacant
 import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.component';
 import { routing, appRoutingProviders } from './app.routing';
 import { LoginComponent } from './login/login.component';
-import { EditComponent } from './catalogos/cat-area/edit.component';
+import { EditAreaComponent } from './catalogos/cat-area/edit.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +93,7 @@ import { EditComponent } from './catalogos/cat-area/edit.component';
     CatTipvacanteComponent,
     CatUsuarioComponent,
     LoginComponent,
-    EditComponent
+    EditAreaComponent
   ],
 
   imports: [
