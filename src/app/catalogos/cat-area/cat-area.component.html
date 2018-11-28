@@ -1,53 +1,36 @@
-
-<button mz-button (click)="basicModal.openModal()">
-    Nuevo
-  </button>
 <div class="container">
-<table class="highlight">
-  <thead>
-    <tr>
-        <th>ID</th>
-        <th>Area</th>
-        <th>Modificar</th>
-        <th>Eliminar</th>
-    </tr>
-  </thead>
+    <app-create-area></app-create-area>
+    <table class="highlight">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Area</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
 
-  <tbody>
-    <tr *ngFor="let a of arrayAreas">
-      <td> {{a.arnIdarean}}</td>
-      <td>{{a.arnTipo}}</td>
-      <td><button mz-button [routerLink]="['/Edit', a.arnIdarean]">
-        Editar
+        <tbody>
+            <tr *ngFor="let a of arrayAreas">
+                <td> {{a.arnIdarean}}</td>
+                <td>{{a.arnTipo}}</td>
+                <td>
+                    <button mz-button [float]="true" [routerLink]="['/Edit', a.arnIdarean]" class="waves-effect waves-light btn indigo">
+                      <i mz-icon
+                      [align]="'center'"
+                      [icon]="'create'"
+                      [size]="'small'">
+                    </i>
       </button></td>
-      <td><button mz-button (click) = "deleteBusiness(a.arnIdarean)">
-        Eliminar
+                <td><button mz-button [flat]="true" [float]="true" (click)="deleteBusiness(a.arnIdarean)" class="btn red">
+                  <i mz-icon
+                  [align]="'right'"
+                  [icon]="'delete_forever'"
+                  [size]="'small'">
+                </i>
       </button></td>
-    </tr>
+            </tr>
 
-  </tbody>
-</table>
+        </tbody>
+    </table>
 </div>
-
-<div >
-    <mz-modal #basicModal>
-      <mz-modal-header>
-        <h4>Agregar Area</h4>
-      </mz-modal-header>
-      <mz-modal-content>
-        <form [formGroup]="angForm">
-
-          <label >Area</label>
-          <input type="text" class="form-control" formControlName="arnTipo" #arnTipo/>
-
-        </form>
-      </mz-modal-content>
-      <mz-modal-footer>
-        <button mz-button [flat]="true"
-         role="button" (click)='addarea(arnTipo.value)'
-         mz-modal-close>Guardar</button>
-        <button mz-button [flat]="true" mz-modal-close>Cancelar</button>
-      </mz-modal-footer>
-    </mz-modal>
-</div>
-

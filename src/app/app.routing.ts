@@ -41,6 +41,7 @@ import { SolicitudCandidatoComponent} from './solicitud/solicitud-candidato.comp
 import { SolicitudRequerimientoComponent} from './solicitud/solicitud-requerimiento.component';
 import { LoginComponent} from './login/login.component';
 import { EditAreaComponent} from './catalogos/cat-area/edit.component';
+import { CreateAreaComponent } from './catalogos/cat-area/create-area.component';
 
 
 
@@ -49,6 +50,9 @@ import { EditAreaComponent} from './catalogos/cat-area/edit.component';
 
  const appRoutes: Routes = [
   {path: 'Area', component: CatAreaComponent, },
+  {path: 'Create-area', component: CreateAreaComponent, },
+  {path: 'Edit/:id', component: EditAreaComponent},
+
   {path: 'Candidato', component: CatCandidatoComponent },
   {path: 'Cliente', component: CatClienteComponent },
   {path: 'Competencia-candidato', component: CatCompcandidatoComponent },
@@ -86,7 +90,7 @@ import { EditAreaComponent} from './catalogos/cat-area/edit.component';
   {path: 'Solicitud-Candidato', component: SolicitudCandidatoComponent },
   {path: 'Solicitud-Requerimiento', component: SolicitudRequerimientoComponent},
   {path: 'Login', component: LoginComponent},
-  {path: 'Edit/:id', component: EditAreaComponent}
+
   ];
 
  export const appRoutingProviders: any[] = [];

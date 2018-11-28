@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {  HttpModule } from '@angular/http';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,7 +9,7 @@ import { MaterializeModule } from './material.congif';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CatAreaComponent } from './catalogos/cat-area/cat-area.component';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import { RouterModule, Routes} from '@angular/router';
 import { SolicitudRequerimientoComponent } from './solicitud/solicitud-requerimiento.component';
 import { SolicitudCandidatoComponent } from './solicitud/solicitud-candidato.component';
@@ -50,6 +50,7 @@ import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.compone
 import { routing, appRoutingProviders } from './app.routing';
 import { LoginComponent } from './login/login.component';
 import { EditAreaComponent } from './catalogos/cat-area/edit.component';
+import { CreateAreaComponent } from './catalogos/cat-area/create-area.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { EditAreaComponent } from './catalogos/cat-area/edit.component';
     CatTipvacanteComponent,
     CatUsuarioComponent,
     LoginComponent,
-    EditAreaComponent
+    EditAreaComponent,
+    CreateAreaComponent
   ],
 
   imports: [

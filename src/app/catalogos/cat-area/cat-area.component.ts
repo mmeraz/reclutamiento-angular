@@ -12,13 +12,12 @@ import swal from 'sweetalert2';
   providers: [AreaService]
 })
 export class CatAreaComponent implements OnInit {
-  angForm: FormGroup;
   arrayAreas: Catarea[];
+  selectArea: Catarea;
 
   constructor( private areaService: AreaService,
     private fb: FormBuilder, private bs: AreaService,
     private activatedRoute: ActivatedRoute) {
-      this.createForm();
     }
 
   ngOnInit() {
@@ -26,44 +25,25 @@ export class CatAreaComponent implements OnInit {
       (data: Catarea[]) => this.arrayAreas = data
     );
   }
-  createForm() {
-    this.angForm = this.fb.group({
-      arnTipo: ['', Validators.required ]
-    });
-  }
-
-  addarea(arnTipo) {
-    this.bs.addarea(arnTipo);
-    swal({
-      position: 'top',
-      type: 'success',
-      title: `Área creada con éxito`,
-      showConfirmButton: false,
-      timer: 1500
-    });
-    console.log('Area registrada');
-  }
   deleteBusiness(id) {
-    this.bs.deleteBusiness(id).subscribe(res => {
-      console.log('Deleted');
       swal({
         title: 'Está seguro?',
-        text: `¿Seguro desea eliminar al área ${id}?`,
+      text: `¿Seguro desea eliminar al área ${id}?`,
         type: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
+      confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Si, eliminar!',
         cancelButtonText: 'Cancelar'
       }).then(result => {
         if (result.value) {
-          this.areaService.deleteBusiness(id).subscribe(data => {
+        this.areaService.deleteBusiness(id).subscribe(data => {
             this.arrayAreas = this.arrayAreas.filter(c => c !== id);
           });
           swal('Eliminado!', 'Se ha eliminado el área.', 'success');
         }
       });
-    });
+      console.log('Deleted');
   }
 
 }

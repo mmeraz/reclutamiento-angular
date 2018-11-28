@@ -47,7 +47,7 @@ export class AreaService {
     this
       .clienteHttp
       .put(`${this.url}/update/${arnIdarean}`, obj)
-      .subscribe(res => console.log('Done'));
+      .subscribe(res => console.log('Done editado'));
   }
   deleteBusiness(id) {
     return this
