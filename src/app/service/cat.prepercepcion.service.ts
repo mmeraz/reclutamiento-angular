@@ -6,7 +6,10 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Catprepercepcion } from '../model/catprepercepcion.model';
 
-
+@Injectable({
+  providedIn: 'root'
+}
+)
 export class PrePercepcionService {
     private url = 'http://localhost:8085/api/v1/';
 

@@ -6,24 +6,15 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { Cattipovacante } from '../model/cattipovacante.model';
 
-
+@Injectable({
+  providedIn: 'root'
+}
+)
 export class TipoVacanteService {
-    private url = 'http://localhost:8085/api/v1/';
 
 
-  constructor( private clienteHttp: HttpClient) {}
+  constructor( ) {}
 
-  getAreas() {
-    return this.clienteHttp.get<Cattipovacante[]>(this.url + '/fetch');
-  }
-
-  addtipovacante(tvaTipo) {
-    const obj = {
-      tvaTipo: tvaTipo
-    };
-    this.clienteHttp.post(this.url + '/add', obj)
-        .subscribe(res => console.log('Done'));
-  }
 
 
 }

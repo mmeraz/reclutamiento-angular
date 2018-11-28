@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { Catdatoscandidato} from '../model/catdatoscandidato.model';
+import { Catdoccandidato} from '../model/catdoccandidato.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class DocumentosService {
     constructor( private clienteHttp: HttpClient) {}
 
     getAreas() {
-      return this.clienteHttp.get<Catdatoscandidato[]>(this.url + '/fetch');
+      return this.clienteHttp.get<Catdoccandidato[]>(this.url + '/fetch');
     }
 
     addarea(cndNombre, cndApellidoPat, cndApellidoMat, cndCalle, cndNumext, cndNumint,
