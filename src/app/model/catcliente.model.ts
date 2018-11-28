@@ -1,4 +1,5 @@
-export interface Catcliente{
-    
- 
+export interface Catcliente {
+  cliIdcliente: number;
+  cliNombre: string;
+  cliRazonsocial: string;
 }

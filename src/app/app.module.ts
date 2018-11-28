@@ -14,7 +14,6 @@ import { RouterModule, Routes} from '@angular/router';
 import { SolicitudRequerimientoComponent } from './solicitud/solicitud-requerimiento.component';
 import { SolicitudCandidatoComponent } from './solicitud/solicitud-candidato.component';
 import { CatDocumentosComponent } from './catalogos/cat-documentos/cat-documentos.component';
-import { CatDoccandidatoComponent } from './catalogos/cat-doccandidato/cat-doccandidato.component';
 import { CatCompcandidatoComponent } from './catalogos/cat-compcandidato/cat-compcandidato.component';
 import { CatContactclienteComponent } from './catalogos/cat-contactcliente/cat-contactcliente.component';
 import { CatClienteComponent } from './catalogos/cat-cliente/cat-cliente.component';
@@ -45,12 +44,16 @@ import { CatSeguisolicitudComponent } from './catalogos/cat-seguisolicitud/cat-s
 import { CatSolidiomaComponent } from './catalogos/cat-solidioma/cat-solidioma.component';
 import { CatSolpercepcionesComponent } from './catalogos/cat-solpercepciones/cat-solpercepciones.component';
 import { CatConsolicitadoComponent } from './catalogos/cat-consolicitado/cat-consolicitado.component';
-import { CatTipvacanteComponent } from './catalogos/cat-tipvacante/cat-tipvacante.component';
 import { CatUsuarioComponent } from './catalogos/cat-usuario/cat-usuario.component';
 import { routing, appRoutingProviders } from './app.routing';
 import { LoginComponent } from './login/login.component';
 import { EditAreaComponent } from './catalogos/cat-area/edit.component';
+<<<<<<< HEAD
 import { CreateAreaComponent } from './catalogos/cat-area/create-area.component';
+=======
+import { CatTipvacanteComponent } from './catalogos/cat-tipvacante/cat-tipvacante.component';
+import { CatDoccandidatoComponent } from './catalogos/cat-doccandidato/cat-doccandidato.component';
+>>>>>>> 31e0d4b59e09715b336ffdcf3524a84f726b33a9
 
 @NgModule({
   declarations: [
@@ -68,7 +71,6 @@ import { CreateAreaComponent } from './catalogos/cat-area/create-area.component'
     CatContactoComponent,
     CatConteccandidatoComponent,
     CatContecnicosComponent,
-    CatDoccandidatoComponent,
     CatDocumentosComponent,
     CatEntrevistaComponent,
     CatEquipoComponent,
@@ -91,11 +93,15 @@ import { CreateAreaComponent } from './catalogos/cat-area/create-area.component'
     CatSolicitudComponent,
     CatSolidiomaComponent,
     CatSolpercepcionesComponent,
-    CatTipvacanteComponent,
     CatUsuarioComponent,
     LoginComponent,
     EditAreaComponent,
+<<<<<<< HEAD
     CreateAreaComponent
+=======
+    CatTipvacanteComponent,
+    CatDoccandidatoComponent
+>>>>>>> 31e0d4b59e09715b336ffdcf3524a84f726b33a9
   ],
 
   imports: [
